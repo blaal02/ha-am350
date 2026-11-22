@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "AM350 RV Leveler",
+        "description": "Choose the AM350 transmitter (AMS350-RV-TX). Power off the display first if it is connected.",
+        "data": {
+          "address": "Device"
+        }
+      }
+    },
+    "abort": {
+      "no_devices_found": "No AM350 transmitter found in range.",
+      "already_configured": "Device is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "tilt_x": {
+        "name": "Tilt X"
+      },
+      "tilt_y": {
+        "name": "Tilt Y"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Calibration",
+        "description": "Offsets are subtracted from the received angles. Tick Use current reading as zero while the RV is level to set both offsets automatically (the values above are then ignored).",
+        "data": {
+          "x_offset": "Tilt X offset (°)",
+          "y_offset": "Tilt Y offset (°)",
+          "set_to_current": "Use current reading as zero"
+        }
+      }
+    },
+    "error": {
+      "no_reading": "No reading received yet; wait until the device is connected."
+    }
+  }
+}
